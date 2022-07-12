@@ -1,0 +1,181 @@
+:root {
+
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* text styling */
+
+h1 {
+  color: var(--dark-blue);
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: var(--dark-blue);
+  font-size: 1rem;
+  font-weight: 900;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+a {
+  color: var(--bright-blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  text-decoration: none;
+  transition: 0.15s;
+  color: hsla(245, 75%, 52%, 0.773);
+}
+
+
+/* button styling */
+
+button {
+  width: 100%;
+  font-weight: 900;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.9rem;
+  margin-top: 1rem;
+}
+
+.proceed {
+  background: var(--bright-blue);
+  color: white;
+  box-shadow: 0 0.8rem 1rem hsla(245, 75%, 52%, 0.231);
+}
+
+.proceed:hover {
+  background: hsla(245, 75%, 52%, 0.773);
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.cancel {
+  background: transparent;
+  color: var(--desaturated-blue);
+}
+
+.cancel:hover {
+  color: var(--dark-blue);
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+/* general */
+
+body {
+  background: var(--pale-blue);
+  font-family: 'red hat display';
+  color: var(--desaturated-blue);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1rem;
+}
+
+main {
+  background: white;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 0.8rem 2rem hsla(245, 84%, 59%, 0.171);
+  max-width: 450px;
+}
+
+.order-summary {
+  margin: 2.4rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.mobile {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -99;
+}
+
+.desktop {
+  display: none;
+}
+
+.annual-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--very-pale-blue);
+  border-radius: 0.6rem;
+  padding: 1.4rem;
+  margin: 1rem 0;
+}
+
+.product {
+  display: flex;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.product p {
+  text-align: left;
+}
+
+
+/* footer styling */
+
+.attribution { 
+  font-size: 1rem; 
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: var(--bright-blue); 
+}
+
+
+@media screen and (min-width: 500px) {
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -99;
+  }
+}
+
+
